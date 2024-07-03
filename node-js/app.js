@@ -12,3 +12,10 @@
 // const validator = require('validator')
 // console.log(validator.isEmail('gmail.com'))
 // console.log(validator.isURL('this.in'))
+
+// ** use npm package chalk
+// const chalk = require('chalk')
+// console.log(chalk.red('error'))
+
+
+
