@@ -17,5 +17,54 @@
 // const chalk = require('chalk')
 // console.log(chalk.red('error'))
 
+// ** argument from terminal
+// const argument = process.argv[2]
+// if(argument == 'title'){
+//     console.log(argument)
+// }else if(argument== 'name'){
+//     console.log(argument)
+// }
 
+const yargs = require('yargs')
 
+// customize yargs version
+ yargs.version('1.1.0')
+// console.log(yargs.argv)
+
+//customize add command
+yargs.command({
+    command: 'add',
+    describe: 'new add command',
+    handler: function() {
+        console.log('new note adding')
+    }
+})
+
+//customize remove command
+yargs.command({
+    command: 'remove',
+    describe: 'remove a note',
+    handler: function() {
+        console.log('note removing')
+    }
+})
+
+//customize list command
+yargs.command({
+    command: 'list',
+    describe: 'list your note',
+    handler: function() {
+        console.log('note list format')
+    }
+})
+
+//customize read command
+yargs.command({
+    command: 'read',
+    describe: 'read a note',
+    handler: function() {
+        console.log('note reading')
+    }
+})
+
+console.log(yargs.argv)
