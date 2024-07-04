@@ -35,6 +35,13 @@ const yargs = require('yargs')
 yargs.command({
     command: 'add',
     describe: 'new add command',
+    builder: {
+        title:{
+            describe:"title for note",
+            demandOption: true,
+            type:'string'
+        }
+    },
     handler: function() {
         console.log('new note adding')
     }
@@ -68,3 +75,4 @@ yargs.command({
 })
 
 console.log(yargs.argv)
+//yargs.parse(argv)
