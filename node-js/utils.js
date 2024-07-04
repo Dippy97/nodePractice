@@ -2,7 +2,7 @@ const fs = require('fs')
 const getNotes = function(title, body) {
     const notes = fromNotes()
     existNote = notes.filter(function(obj){ return obj.title == title})
-    console.log(notes, title,existNote,'234567890')
+    //console.log(notes, title,existNote,'234567890')
     const note = {
         title: title,
         body: body

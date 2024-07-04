@@ -81,5 +81,5 @@ yargs.command({
     }
 })
 
-console.log(yargs.argv)
-//yargs.parse(argv)
+//console.log(yargs.argv)
+yargs.parse()
