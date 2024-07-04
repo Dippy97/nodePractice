@@ -32,6 +32,7 @@ const yargs = require('yargs')
 // console.log(yargs.argv)
 
 //customize add command
+const getNotes = require('./utils')
 yargs.command({
     command: 'add',
     describe: 'new add command',
@@ -40,10 +41,16 @@ yargs.command({
             describe:"title for note",
             demandOption: true,
             type:'string'
+        },
+        body:{
+            describe:"body for note",
+            demandOption: true,
+            type:'string'
         }
     },
-    handler: function() {
+    handler: function(argv) {
         console.log('new note adding')
+        getNotes(argv.title,argv.body)
     }
 })
 
